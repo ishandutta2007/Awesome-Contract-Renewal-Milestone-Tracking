@@ -65,9 +65,9 @@ The following table tracks category-leading hosted platforms sorted in descendin
 
 ## 💻 Open-Source GitHub Projects
 
-The following table curates verified open-source contract management software, renewal calculators, and post-signature obligation trackers, sorted in descending order by **GitHub Stars (Descending)**. Every star badge links directly to the stargazers page of that repository.
+The following table curates verified open-source contract management software, renewal calculators, and post-signature obligation trackers, sorted in descending order by **GitHub_Stars (Descending)**. Every Stars_Badge links directly to the stargazers page of that repository.
 
-| Project & Repository 📦 | GitHub Stars 🌟 | Primary Language / Stack 🛠️ | Description & Renewal / Milestone Capabilities 💡 |
+| Project & Repository 📦 | GitHub_Stars 🌟 | Primary Language / Stack 🛠️ | Description & Renewal / Milestone Capabilities 💡 |
 |:---|:---|:---|:---|
 | **[steedos/contract](https://github.com/steedos/contract)** | [![Stars](https://img.shields.io/github/stars/steedos/contract?style=social&color=white)](https://github.com/steedos/contract/stargazers) | TypeScript / Node.js / Docker | Comprehensive enterprise open-source Contract Management System (CMS). Built on Steedos low-code infrastructure with multi-tenant architecture, automated lifecycle state machines, contract milestone triggers, expiration date notifications, and e-signature integrations. |
 | **[sharptoolbox/Onto-Contract](https://github.com/sharptoolbox/Onto-Contract)** | [![Stars](https://img.shields.io/github/stars/sharptoolbox/Onto-Contract?style=social&color=white)](https://github.com/sharptoolbox/Onto-Contract/stargazers) | Python / TypeScript / AI | Ontology-driven AI-native contract management platform. Leverages knowledge graphs and LLMs to parse agreements, identify key operational milestones, track notice cutoff periods, and verify post-signature contractual compliance. |
@@ -110,7 +110,7 @@ For engineering teams constructing internal legal ops automation, combine modula
 Contributions are welcome! To propose an addition or update:
 
 1. 🍴 **Fork** the repository.
-2. 📝 **Add or edit** entries in [`README.md`](README.md). Please ensure SaaS products adhere to tabular formatting with specific pricing, trial limits, and company scale, and open-source projects include star count social badges.
+2. 📝 **Add or edit** entries in [`README.md`](README.md). Please ensure SaaS products adhere to tabular formatting with specific pricing, trial limits, and company scale, and open-source projects include Stars_Count social badges.
 3. 🧪 **Validate links** and ensure all descriptions remain objective, factual, and deadline-oriented.
 4. 🚀 **Submit a Pull Request** with a descriptive summary of changes.
 
@@ -150,3 +150,12 @@ Thank you for exploring this curated repository! If you find this directory valu
 <p align="center">
   ⭐ <strong>Found this resource helpful? Star this repository to help other legal ops, procurement, and developer teams stay ahead of critical deadlines!</strong> ⭐
 </p>
+
+## ⭐ Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Contract-Renewal-Milestone-Tracking&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Contract-Renewal-Milestone-Tracking_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Contract-Renewal-Milestone-Tracking_growth.svg">
+  </picture>
+</a>
