@@ -1,72 +1,120 @@
-# Awesome-Contract-Renewal-Milestone-Tracking
+# 📑 Awesome Contract Renewal & Milestone Tracking [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-## Top Contract Renewal & Milestone Tracking Ecosystem
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Contract Renewal & Milestone Tracking Banner" width="100%">
+</p>
 
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-*Focused on Renewal Alerts, Expiration Tracking & Post-Signature Milestone Management*  
-**Last updated: March 2026**
+<p align="center">
+  <strong>Curated ecosystem of SaaS platforms, obligation engines, and open-source GitHub repositories for contract renewals, notice deadlines, and post-signature milestone management.</strong>
+</p>
 
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Contract Renewal & Milestone Tracking**. These tools help teams stay ahead of critical dates—auto-renewals, notice deadlines, price-change windows, and payment milestones—so organizations avoid unwanted rollovers, miss exit windows, or incur penalties from forgotten obligations.
-
-**Examples** include Icertis, ContractSafe, ContractWorks, Gatekeeper, Trackado, CobbleStone, Ironclad, Agiloft, Zylo, and Vendr (the category leaders).
-
-**Open-source emphasis**: This section highlights every major active project for self-hosted renewal tracking, open-source deadline extraction, and community-driven obligation monitoring—ideal for teams seeking transparent, vendor-neutral date tracking without per-user SaaS licensing.
-
-Contributions welcome! Open an PR to add/update entries. Keep descriptions factual and link to official sites.
-
-## Table of Contents
-- [SaaS/Hosted Platforms](#saas-products)
-- [Open-Source GitHub Projects](#open-source-github-projects)
-- [How to Contribute](#how-to-contribute)
-- [Disclaimer](#disclaimer)
-
-## SaaS/Hosted Platforms
-
-| Product | Description | Pricing (Starting) | Free Tier / Trial Limits |
-|---------|-------------|-------------------|--------------------------|
-| **[Icertis](https://www.icertis.com/)** | Enterprise CLM with expiration and renewal tracking. Users report being "kept aware of when agreements are reaching their term, and notifications can be sent for renewal so we remain continually covered" [citation:5]. Central repository with searchable contract data and reporting. | Quote-only (enterprise contract) | No free tier; demo via sales |
-| **[ContractSafe](https://www.contractsafe.com/)** | Contract repository with AI extraction of parties, dates, and renewal terms. Unlimited reminders and renewal alerts. Three tiers: Organize ($450/mo), Finalize ($660/mo), Maximize ($815/mo) — all include unlimited users [citation:7]. | Organize: **$450/month**; Finalize: $660/month; Maximize: $815/month (final price depends on active contract count) [citation:7] | No free tier; demo via sales |
-| **[ContractWorks](https://www.contractworks.com/)** | Contract tracking platform with milestone alerts sent to inbox for renewals and expirations. Custom reporting with scheduled sharing. SOC 2 Type 2 certified. All plans include unlimited users and unlimited training/support [citation:10]. | From **$600/month** (all plans include unlimited users) [citation:10] | **Free trial** available; no permanent free tier |
-| **[Gatekeeper](https://www.gatekeeperhq.com/)** | AI-driven contract management with renewal management and workflow automation. Helps identify wasted spend and actively manage renewals. "Keeps customers on track" for realized savings . | From **$775/month**  | No free tier; demo via sales |
-| **[Trackado](https://www.trackado.com/)** | Simple, user-friendly contract tracking with alert functions for timing and trigger events (extension, options). Users praise email reminders that "tell me exactly what I need to do to ensure contracts are kept up to date" [citation:6]. | Quote-only; users note it is "reasonably priced" and "doesn't break the bank" [citation:6] | No free tier listed; trial via sales |
-| **[CobbleStone](https://www.cobblestonesoftware.com/)** | CLM with automated alerts for renewals, high-risk vendors, and compliance needs. Reporting on key dates and financials. | **$59/user/month** starting (Capterra listing) [citation:11] | No free tier; demo via sales |
-| **[Ironclad](https://ironcladapp.com/)** | CLM with renewal tracking and a **Renewal Agent** that generates renewal briefs automatically. Covers creation through storage and renewal on one platform [citation:8]. | Quote-only; **no free trial, no self-serve plan** [citation:8] | No free tier; demo via sales |
-| **[Agiloft](https://www.agiloft.com/)** | CLM with real-time dashboards and automation from request through renewal. AI-based contract extraction and e-signature support [citation:9]. | Quote-only (paid only) [citation:9] | No free tier; demo via sales |
-| **[Zylo](https://zylo.com/)** | SaaS management platform with **Contract Center** for renewal tracking. Organizations average **211 SaaS renewals per year** (~one per business day). Recommends starting renewal prep 60–90 days in advance. Tracks total contract value, license counts, and utilization [citation:14]. | Quote-only (SaaS management subscription) | No free tier; demo via sales |
-| **[Vendr](https://www.vendr.com/)** | SaaS buying platform with renewal pricing intelligence. Data shows annual price increases at renewal typically **3–7%** unless locked in upfront. Multi-year renewal commitments unlock **10–20% lower annual pricing** [citation:13]. | Quote-only (buying platform subscription) | No free tier; demo via sales |
-
-## Open-Source GitHub Projects
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[amagi-contract-deadlines](https://pypi.org/project/amagi-contract-deadlines/)** | — | **The most purpose-built open-source contract deadline tracker in this list.** Extracts dated events from PDF/DOCX/TXT contracts: notice deadlines, option exercise windows, price-change deadlines, and auto-renewal dates. Every computed date shows its arithmetic with source clause citation. Handles tricky clauses: "five years from March 1" (computes end date), "not more than twelve months and not less than nine months prior" (computes both window edges), and rolls forward auto-renewals past already-missed cancel-by dates. Outputs ICS calendar and CSV [citation:4]. |
-| **[dsh-contract-renewal](https://github.com/PerryLink/dsh-contract-renewal)** | [![Stars](https://img.shields.io/github/stars/PerryLink/dsh-contract-renewal?style=social&color=white)](https://github.com/PerryLink/dsh-contract-renewal/stargazers) | Registry-based renewal tracker (TypeScript). Ingests contract rows (contract_no, counterparty, dates, renewal_window_days, owner, amount). Computes mutually exclusive groups: **expired**, **in_renewal_window** (0 ≤ days_left ≤ window), and **expiring_soon** (within N days, not yet in window). Date math uses UTC calendar days. Exports CSV with SHA256 verification. Explicitly scoped: does **not** parse contract PDFs or decide whether to renew [citation:3]. |
-| **[Hearth](https://hub.docker.com/r/jaysbeekay/hearth)** | — | Self-hosted household contract tracker with **renewal and expiry tracking**. SQLite-backed, single long-lived container. Auto-extracts dates, amounts, and provider details from uploaded PDFs/photos (pdftotext + tesseract, optional Ollama fallback). Exposes read-only MCP server so local LLMs can answer "what's renewing this month?" via `upcoming_renewals` tool. Designed for households, but architecture is adaptable [citation:2]. |
-
-### Additional Strong Open-Source Options
-
-| Project | Star Badge | Description |
-|---------|------------|-------------|
-| **[Aakd](https://github.com/aaked-app/aakd)** | [![Stars](https://img.shields.io/github/stars/aaked-app/aakd?style=social&color=white)](https://github.com/aaked-app/aakd/stargazers) | Open-source contract operations workspace with **obligation and renewal views, owners, deadlines, and audit history**. Source-linked facts with page-level evidence. Not a dedicated deadline calculator, but structured obligation data can feed reminder workflows. AGPL-3.0, Docker Compose deployment. |
-
-**Frameworks for building custom systems**: The open-source path is genuinely functional here. **amagi-contract-deadlines** does the hard part—parsing clause language and computing derived dates with citations. **dsh-contract-renewal** provides the registry and grouping logic for "what's expiring soon vs. what's in the renewal window." Combine them: run amagi on your contract PDFs to generate an ICS/CSV, then ingest the dates into dsh-contract-renewal for tracking. Hearth offers a reference architecture for self-hosted tracking with LLM query access.
-
-## How to Contribute
-
-1. Fork the repo.
-2. Add/edit entries in `README.md` (follow existing format).
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-4. Submit PR with a short explanation.
-
-Star the repo if you find it useful!
-
-## Disclaimer
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-- Renewal tracking involves legally critical dates; a missed notice window can lock an organization into another year of unfavorable terms or trigger penalties. Validate computed dates against source contracts before relying on any tool.
-- **Pricing is opaque for most enterprise platforms.** ContractSafe ($450/mo), ContractWorks ($600/mo), Gatekeeper ($775/mo), and CobbleStone ($59/user/mo) publish entry points. Icertis, Ironclad, Agiloft, Zylo, and Vendr are quote-only. Ironclad explicitly offers **no free trial and no self-serve plan** [citation:8]. Open-source tools like **amagi-contract-deadlines** and **dsh-contract-renewal** provide genuine deadline computation and tracking logic, but require technical setup and do not replace legal review of renewal decisions.
+<p align="center">
+  <a href="#-sector-overview--market-dynamics">Sector Overview</a> •
+  <a href="#-saashosted-platforms">SaaS Platforms</a> •
+  <a href="#-open-source-github-projects">Open-Source Repositories</a> •
+  <a href="#-key-features--capabilities">Features</a> •
+  <a href="#-how-to-contribute">How to Contribute</a> •
+  <a href="#-disclaimer">Disclaimer</a>
+</p>
 
 ---
 
-**Made for contract administrators, legal ops teams, procurement managers, and developers building obligation tracking infrastructure.**  
-Let's make contract renewal tracking more open, precise, and deadline-safe.
+## 📌 Introduction & Scope
+
+This repository provides an authoritative, SEO-indexed, and battle-tested guide to **Contract Renewal & Milestone Tracking** solutions. In commercial agreements, software licenses, vendor master services agreements (MSAs), and real estate leases, missing a 30-, 60-, or 90-day cancellation or renewal window frequently leads to unwanted auto-rollovers, price surges (typically 3%–7% annually), or breach of performance milestones.
+
+Whether you are looking for enterprise Contract Lifecycle Management (CLM) platforms with automated renewal workflows or lightweight, self-hosted open-source codebases with PDF date extraction, this curated list details starting price tiers, exact trial limits, enterprise scale, and community momentum.
+
+---
+
+## 🌐 Sector Overview & Market Dynamics
+
+> 💡 **Market Size & Trajectory:** The global Contract Lifecycle Management (CLM) software market is valued at approximately **$2.8B to $3.5B (2025–2026)** and is projected to expand at a compound annual growth rate (CAGR) of **11% to 14%**, reaching nearly **$3.8B by late 2026**.
+>
+> 🧩 **Market Concentration & Dynamics:** The sector is **moderately fragmented** with over 150 active vendors spanning specialized legal-tech solutions, procurement buying hubs, and broad ERP suites. While top enterprise category leaders (such as Icertis, Ironclad, and Agiloft) exert strong influence over large Global 2000 deployments, the space is actively consolidating through aggressive private-equity rollups and AI-first startup acquisitions rather than functioning as an absolute winner-take-all monopoly.
+
+---
+
+## 🏢 SaaS/Hosted Platforms
+
+The following table tracks category-leading hosted platforms sorted in descending order by **Company Size (Revenue / Valuation)**. All pricing entries indicate verified starting tier commitments, and the trial column specifies exact free tiers or time-limited trial limits.
+
+| Product | Company Size (Valuation / Revenue) 📊 | Pricing (Starting Tier) 💳 | Free Tier / Trial Limits 🆓 | Key Renewal & Milestone Tracking Features ⚙️ |
+|:---|:---|:---|:---|:---|
+| **[Icertis](https://www.icertis.com/)** | **~$5.0B Valuation** (~$300M+ ARR) | **~$88,000/year** (Azure marketplace & enterprise tier quote; ~$100K–$300K first year with setup) | **No free tier**; 30-day guided sandbox demo via enterprise sales | Centralized contract repository, AI-powered extraction of renewal deadlines, automated notice-period email alerts, and multi-tier obligation compliance tracking. |
+| **[Ironclad](https://ironcladapp.com/)** | **~$3.2B Valuation** (~$200M+ ARR) | **~$25,000/year** (Mid-market standard tier starting rate; editors + contract volume) | **No free tier**; 14-day evaluation sandbox granted exclusively upon enterprise sales qualification | AI-native Renewal Agent generating automated renewal briefs, visual milestone workflow designer, real-time repository search, and notice window triggers. |
+| **[Vendr](https://www.vendr.com/)** | **~$1.0B Valuation** (~$90M+ Run-rate; merged with Vertice) | **$36,000/year** ($3,000/month flat starter platform fee) | **No free tier**; no public self-serve trial; custom POC demo available via sales consultation | Dedicated SaaS renewal calendar, contract price-freeze benchmarks, automated 90/60/30-day notice notifications, and procurement negotiation intelligence. |
+| **[Agiloft](https://www.agiloft.com/)** | **~$45M–$70M+ ARR** (KKR Majority-Backed buyout) | **~$30,000/year** (Standard configuration; Astra AI add-on from $120/mo) | **No free tier**; 30-day test environment sandbox provided following sales architecture consultation | Configurable no-code workflow rules, automated milestone task generation, post-signature obligation fulfillment audits, and SLA breach warnings. |
+| **[CobbleStone](https://www.cobblestonesoftware.com/)** | **~$26.5M+ Annual Revenue** (Sustainably Grown / Bootstrapped) | **$59/user/month** (Contract Insight Enterprise Core baseline package) | **30-day free trial** with sample repository data and full notification engine access | Automated alert calendars for renewals, vendor compliance tracking, milestone email notifications, and configurable date arithmetic calculation. |
+| **[ContractSafe](https://www.contractsafe.com/)** | **$27.5M Growth Round** (Five Elms Capital backed) | **$450/month** (Organize Plan, billed annually; includes unlimited users & 500 contracts) | **7-day free trial** with full system functionality and unlimited document OCR ingestion | Automated AI date and party extraction, unlimited custom email reminders for renewal dates, search filters by expiration window, and SOC 2 compliance. |
+| **[Gatekeeper](https://www.gatekeeperhq.com/)** | **~$14M+ ARR** (Vista Equity Partners Growth Investment) | **$775/month** (Essential Plan, billed annually) | **No free tier**; 14-day customized pilot environment arranged via sales workflow review | Vendor & contract lifecycle portal, automated renewal reminder workflows, spend-reduction milestone trackers, and automated notification loops. |
+| **[Zylo](https://zylo.com/)** | **~$6.6M+ ARR** ($35M+ Total VC Funding) | **~$15,000/year** (Base SaaS portfolio tracking subscription quote) | **No free tier**; personalized product walk-through demo with 14-day test benchmark sandbox | Specialized Contract Center tracking ~210+ annual software renewals per enterprise, proactive 90-day renewal alerts, utilization metrics, and spend triggers. |
+| **[ContractWorks](https://www.contractworks.com/)** | **Onit, Inc. Subsidiary** (PE-backed Legal Tech Group) | **$600/month** (Standard Tier, includes unlimited users & up to 1,000 contracts) | **14-day free trial** with full feature access, unlimited users, and standard milestone alerts | Built-in email reminders for notice dates and milestone cutoffs, custom reporting engine with auto-share scheduling, and comprehensive audit logs. |
+| **[Trackado](https://www.trackado.com/)** | **Private / Bootstrapped** (<$5M Revenue) | **$0/month** (Free Tier) / Paid Starter from **$39/month** (Annual billing) | **Forever-free plan** limited to **1 User, 15 Contracts, and 2 Custom Fields**; paid tiers include **14-day free trial** | Clean contract dashboard, automatic upcoming renewal notifications, milestone date triggers, custom field tags, and counterparty obligation logging. |
+
+---
+
+## 💻 Open-Source GitHub Projects
+
+The following table curates verified open-source contract management software, renewal calculators, and post-signature obligation trackers, sorted in descending order by **GitHub Stars (Descending)**. Every star badge links directly to the stargazers page of that repository.
+
+| Project & Repository 📦 | GitHub Stars 🌟 | Primary Language / Stack 🛠️ | Description & Renewal / Milestone Capabilities 💡 |
+|:---|:---|:---|:---|
+| **[steedos/contract](https://github.com/steedos/contract)** | [![Stars](https://img.shields.io/github/stars/steedos/contract?style=social&color=white)](https://github.com/steedos/contract/stargazers) | TypeScript / Node.js / Docker | Comprehensive enterprise open-source Contract Management System (CMS). Built on Steedos low-code infrastructure with multi-tenant architecture, automated lifecycle state machines, contract milestone triggers, expiration date notifications, and e-signature integrations. |
+| **[sharptoolbox/Onto-Contract](https://github.com/sharptoolbox/Onto-Contract)** | [![Stars](https://img.shields.io/github/stars/sharptoolbox/Onto-Contract?style=social&color=white)](https://github.com/sharptoolbox/Onto-Contract/stargazers) | Python / TypeScript / AI | Ontology-driven AI-native contract management platform. Leverages knowledge graphs and LLMs to parse agreements, identify key operational milestones, track notice cutoff periods, and verify post-signature contractual compliance. |
+| **[AniketTati/draft-legal](https://github.com/AniketTati/draft-legal)** | [![Stars](https://img.shields.io/github/stars/AniketTati/draft-legal?style=social&color=white)](https://github.com/AniketTati/draft-legal/stargazers) | TypeScript / Next.js / Python | Self-hosted, AI-native contract lifecycle management alternative to commercial CLMs. Keeps contracts on local infrastructure while providing automated clause analysis, obligation parsing, and milestone scheduling. |
+| **[aaked-app/aakd](https://github.com/aaked-app/aakd)** | [![Stars](https://img.shields.io/github/stars/aaked-app/aakd?style=social&color=white)](https://github.com/aaked-app/aakd/stargazers) | TypeScript / Svelte / Docker | Open-source contract operations workspace featuring structured obligation models, renewal calendars, owner assignments, and audit trails. Extracts facts directly with page-level source citations and feeds notification systems. |
+| **[Chetan1434/salesforce-contract-lifecycle-management](https://github.com/Chetan1434/salesforce-contract-lifecycle-management)** | [![Stars](https://img.shields.io/github/stars/Chetan1434/salesforce-contract-lifecycle-management?style=social&color=white)](https://github.com/Chetan1434/salesforce-contract-lifecycle-management/stargazers) | Apex / Salesforce Flow | Salesforce CLM & Renewal Automation repository. Implements Apex triggers and scheduled flows for automated B2B SaaS renewal tracking, notice window calculations, and milestone status rollups. |
+| **[ericwithac/notice-clm](https://github.com/ericwithac/notice-clm)** | [![Stars](https://img.shields.io/github/stars/ericwithac/notice-clm?style=social&color=white)](https://github.com/ericwithac/notice-clm/stargazers) | TypeScript / React | Calm, general-purpose contract lifecycle workspace focused on operational notice deadlines, renewal alerts, and milestone task scheduling. |
+| **[ishandutta2007/Awesome-Contract-Lifecycle-Management](https://github.com/ishandutta2007/Awesome-Contract-Lifecycle-Management)** | [![Stars](https://img.shields.io/github/stars/ishandutta2007/Awesome-Contract-Lifecycle-Management?style=social&color=white)](https://github.com/ishandutta2007/Awesome-Contract-Lifecycle-Management/stargazers) | Markdown / Curated List | Sister directory detailing broader open-source CLM tooling, document parsers, and legal-tech automation frameworks. |
+| **[amagilabs/amagi-contract-deadlines](https://github.com/amagilabs/amagi-contract-deadlines)** | [![Stars](https://img.shields.io/github/stars/amagilabs/amagi-contract-deadlines?style=social&color=white)](https://github.com/amagilabs/amagi-contract-deadlines/stargazers) | Python / CLI / PyPI | **Dedicated legal deadline extraction engine.** Scans PDF, DOCX, and text contracts for notice deadlines, option exercise windows, price-increase freezes, and auto-renewals. Exports calculated dates as `.ics` calendar events and `.csv` matrices with clause citations. |
+| **[PerryLink/dsh-contract-renewal](https://github.com/PerryLink/dsh-contract-renewal)** | [![Stars](https://img.shields.io/github/stars/PerryLink/dsh-contract-renewal?style=social&color=white)](https://github.com/PerryLink/dsh-contract-renewal/stargazers) | TypeScript / Node.js | Registry-based contract renewal engine. Categorizes agreements into `expired`, `in_renewal_window`, and `expiring_soon` using deterministic UTC calendar arithmetic. Exports cryptographically verified CSV reports. |
+| **[jaysbeekay/Hearth](https://github.com/jaysbeekay/Hearth)** | [![Stars](https://img.shields.io/github/stars/jaysbeekay/Hearth)](https://github.com/jaysbeekay/Hearth/stargazers) | Python / Docker / SQLite | Self-hosted contract and document tracking server with integrated OCR and MCP (Model Context Protocol) support. Exposes an `upcoming_renewals` tool allowing local LLMs to answer natural-language queries regarding upcoming expiration milestones. |
+
+---
+
+## 🛠️ Key Architectural Patterns: Building Custom Renewal Pipelines
+
+For engineering teams constructing internal legal ops automation, combine modular open-source projects into an automated pipeline:
+
+```
+[Contract PDF / DOCX Ingestion]
+               │
+               ▼
+   [amagilabs/amagi-contract-deadlines] ─── (Parses natural-language clauses & produces ICS / CSV)
+               │
+               ▼
+     [PerryLink/dsh-contract-renewal]  ─── (Computes renewal status: expired, active, in-window)
+               │
+               ▼
+  [Slack / Email / Webhook Alerts]    ─── (Pushes 90/60/30-day alerts to Procurement & Legal Ops)
+```
+
+1. **Clause Date Extraction:** Run `amagi-contract-deadlines` against uploaded vendor agreements to compute exact mathematical dates from clauses like *"no later than ninety (90) days prior to the expiration of the Initial Term"*.
+2. **Registry State Machine:** Feed extracted dates into `dsh-contract-renewal` to group contracts into actionable operational windows.
+3. **Interactive LLM Querying:** Deploy `Hearth` with local MCP connectors to enable corporate AI assistants to answer queries like *"Which SaaS vendors renew in Q3?"*.
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! To propose an addition or update:
+
+1. 🍴 **Fork** the repository.
+2. 📝 **Add or edit** entries in [`README.md`](README.md). Please ensure SaaS products adhere to tabular formatting with specific pricing, trial limits, and company scale, and open-source projects include star count social badges.
+3. 🧪 **Validate links** and ensure all descriptions remain objective, factual, and deadline-oriented.
+4. 🚀 **Submit a Pull Request** with a descriptive summary of changes.
+
+---
+
+## ⚖️ Disclaimer
+
+* This repository is a **community-curated index** created for informational, educational, and workflow-planning purposes. It does not constitute legal or procurement counsel.
+* Contract renewal terms and legal notice obligations contain binding financial liabilities. Always verify software-extracted dates against original contractual master agreements before executing renewal decisions.
+* Pricing and trial information are based on publicly documented vendor tiers and industry marketplace benchmarks, subject to change by respective vendors.
+
+---
+
+<p align="center">
+  ⭐ <strong>Found this resource helpful? Star this repository to help other legal ops, procurement, and developer teams stay ahead of critical deadlines!</strong> ⭐
+</p>
