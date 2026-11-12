@@ -1,4 +1,11 @@
-# 📑 Awesome Contract Renewal & Milestone Tracking [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# 📑 Awesome Contract Renewal & Milestone Tracking
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 <p align="center">
   <img src="assets/banner.svg" alt="Awesome Contract Renewal & Milestone Tracking Banner" width="100%">
@@ -12,9 +19,11 @@
   <a href="#-sector-overview--market-dynamics">Sector Overview</a> •
   <a href="#-saashosted-platforms">SaaS Platforms</a> •
   <a href="#-open-source-github-projects">Open-Source Repositories</a> •
-  <a href="#-key-features--capabilities">Features</a> •
+  <a href="#%EF%B8%8F-key-architectural-patterns-building-custom-renewal-pipelines">Pipelines</a> •
+  <a href="#-star-history">Star History</a> •
+  <a href="#-support--sponsor">Support</a> •
   <a href="#-how-to-contribute">How to Contribute</a> •
-  <a href="#-disclaimer">Disclaimer</a>
+  <a href="#%EF%B8%8F-disclaimer">Disclaimer</a>
 </p>
 
 ---
@@ -104,6 +113,29 @@ Contributions are welcome! To propose an addition or update:
 2. 📝 **Add or edit** entries in [`README.md`](README.md). Please ensure SaaS products adhere to tabular formatting with specific pricing, trial limits, and company scale, and open-source projects include star count social badges.
 3. 🧪 **Validate links** and ensure all descriptions remain objective, factual, and deadline-oriented.
 4. 🚀 **Submit a Pull Request** with a descriptive summary of changes.
+
+---
+
+## 💖 Support & Sponsor
+
+Thank you for exploring this curated repository! If you find this directory valuable for your engineering, legal operations, or procurement workflows:
+
+- ⭐ **Star** this repository to help others discover it.
+- 🍴 **Fork** it to build your own customized internal obligation matrix.
+- 📢 **Share** it with fellow contract administrators, procurement leaders, and developers.
+- ☕ **Buy me a coffee / Sponsor:** If this project saved you time or saved your organization from costly auto-renewals, consider sponsoring further maintenance on the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+<p align="center">
+  <a href="https://github.com/sponsors/ishandutta2007">
+    <img src="https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink?style=for-the-badge&logo=github-sponsors" alt="Sponsor on GitHub" />
+  </a>
+</p>
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://www.star-history.com/svg?repos=ishandutta2007/Awesome-Contract-Renewal-Milestone-Tracking&type=date&legend=top-left)](https://www.star-history.com/#ishandutta2007/Awesome-Contract-Renewal-Milestone-Tracking&type=date&legend=top-left)
 
 ---
 
